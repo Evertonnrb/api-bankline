@@ -1,5 +1,6 @@
 package com.dio.santander.banklineapi.model.entities;
 
+import com.dio.santander.banklineapi.model.entities.Conta;
 import lombok.Data;
 
 import javax.persistence.*;
