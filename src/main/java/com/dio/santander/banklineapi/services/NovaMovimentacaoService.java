@@ -9,6 +9,7 @@ import com.dio.santander.banklineapi.model.repositories.MovimentacoesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Service
@@ -29,7 +30,7 @@ public class NovaMovimentacaoService {
         Correntista correntista = correntistaRepository.findById(movimentacaoDTO.getIdConta()).orElse(null);
 
         movimentacao.setDataHora(LocalDateTime.now());
-        movimentacao.setDescicao(movimentacaoDTO.getDescricao());
+        movimentacao.setDescricao(movimentacaoDTO.getDescricao());
         movimentacao.setIdConta(movimentacaoDTO.getIdConta());
         movimentacao.setMovimentacaoTipo(movimentacaoDTO.getTipo());
 
